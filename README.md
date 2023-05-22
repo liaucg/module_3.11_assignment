@@ -121,6 +121,12 @@ This GitHub workflow file contains the instructions that the workflow will execu
 5. Build the docker image by using the [Dockerfile](Dockerfile), tag the image with a version and push it to AWS ECR repository created in Step 5. The commands to do these tasks are written in the **run** which will be executed in bash shell of remote machine.
 
 ## Step 8: Push the Docker image to AWS ECR
-Make a commit to the GitHub repository. Once the changes are pushed to the repository, check out the **Actions** tab in the repository.
+Make a commit to the GitHub repository. Once the changes are pushed to the repository, checkout the **Actions** tab in the repository.
 
 ![image](https://github.com/liaucg/module_3.11_assignment/assets/22501900/e6be94fd-b270-413b-b6f5-d124a8866aa9)
+![image](https://github.com/liaucg/module_3.11_assignment/assets/22501900/0937c6eb-e95b-4a2d-9cd4-54696a7fb481)
+
+Checkout AWS ECR repository for the pushed Docker image.
+![image](https://github.com/liaucg/module_3.11_assignment/assets/22501900/99672a7d-388e-49ab-aaa7-074cf0082105)
+
+

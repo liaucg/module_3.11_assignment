@@ -61,4 +61,7 @@ Here a ECR repository is created to the house the pushed container images where 
 ![image](https://github.com/liaucg/module_3.11_assignment/assets/22501900/db26051c-c649-4b83-bbfe-80e8d99e3015)
 
 ## Step 6: Add AWS access key ID and access key to GitHub secrets
-In order to access AWS ECR registry the AWS access key ID and access key will be added to GitHub repository secrets
+In order to access AWS ECR registry the AWS access key ID and access key will be added to GitHub repository secrets.
+
+![image](https://github.com/liaucg/module_3.11_assignment/assets/22501900/94969256-0d18-4573-b55d-23dd8277c32c)
+

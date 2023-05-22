@@ -11,6 +11,7 @@ The objective of this assignment is to set up a continuous integration and conti
 ```
 $ git clone git@github.com:liaucg/module_3.11_assignment.git
 ```
+
 ## Step 3: Create a Node.js application using the Express framework
 Here is a simple "Hello World from Node.js" application
 ```js
@@ -36,6 +37,7 @@ app.get('/', (req, res) => {
 app.listen(PORT, HOST);
 console.log(`Running on http://${HOST}:${PORT}`);
 ```
+
 ## Step 4: Create a Dockerfile for the application that includes all necessary dependencies
 This Dockerfile contains directives to copy the package*.json file and install dependencies with npm command. Here port **8080** is being exposed because the Nodejs application is listening on port **8080**.
 ```docker
@@ -55,4 +57,8 @@ CMD ["node", "index.js"]
 ```
 ## Step 5: Create AWS ECR repository
 Here a ECR repository is created to the house the pushed container images where later it can be sed by ECS service to get deployed on Amazon platform.
+
 ![image](https://github.com/liaucg/module_3.11_assignment/assets/22501900/db26051c-c649-4b83-bbfe-80e8d99e3015)
+
+## Step 6: Add AWS access key ID and access key to GitHub secrets
+In order to access AWS ECR registry the AWS access key ID and access key will be added to GitHub repository secrets

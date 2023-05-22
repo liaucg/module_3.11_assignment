@@ -55,3 +55,4 @@ CMD ["node", "index.js"]
 ```
 ## Step 5: Create AWS ECR repository
 Here a ECR repository is created to the house the pushed container images where later it can be sed by ECS service to get deployed on Amazon platform.
+![image](https://github.com/liaucg/module_3.11_assignment/assets/22501900/db26051c-c649-4b83-bbfe-80e8d99e3015)

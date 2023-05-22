@@ -60,8 +60,16 @@ Here a ECR repository is created to the house the pushed container images where 
 
 ![image](https://github.com/liaucg/module_3.11_assignment/assets/22501900/db26051c-c649-4b83-bbfe-80e8d99e3015)
 
-## Step 6: Add AWS access key ID and access key to GitHub secrets
-In order to access AWS ECR registry the AWS access key ID and access key will be added to GitHub repository secrets.
+## Step 6: Add AWS access key ID and AWS secret access key to GitHub secrets
+In order to access AWS ECR registry the AWS access key ID and AWS secret access key will be added to GitHub repository secrets.
 
 ![image](https://github.com/liaucg/module_3.11_assignment/assets/22501900/94969256-0d18-4573-b55d-23dd8277c32c)
 
+## Step 7: Create a GitHub Actions workflow file
+This GitHub workflow file contains the instructions that the workflow will execute. There are 4 steps to be executed:
+
+1. Create a Ubuntu remote *environment/Runner* where the workflow can run and build the image.
+2. Login to the remote machine via SSH using the pre-written workflow by Official GitHub Actions, i.e. **checkout@v3**. It simply check out our GitHub repository for [Dockerfile](Dockerfile) to build the docker image.
+3. Configure AWS credentials with the secrets created in Step 6.
+4. Login to AWS ECR
+5. Build the docker image by using the [Dockerfile](Dockerfile), tag the image with a version and push it to AWS ECR repository created in Step 5. The commands to do these tasks are written in the **run** which will be executed in bash shell of remote machine.

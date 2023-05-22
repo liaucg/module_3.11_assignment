@@ -73,3 +73,6 @@ This GitHub workflow file contains the instructions that the workflow will execu
 3. Configure AWS credentials with the secrets created in Step 6.
 4. Login to AWS ECR
 5. Build the docker image by using the [Dockerfile](Dockerfile), tag the image with a version and push it to AWS ECR repository created in Step 5. The commands to do these tasks are written in the **run** which will be executed in bash shell of remote machine.
+
+## Step 8: Push the Docker image to AWS ECR
+Make a commit to the GitHub repository. Once the changes are pushed to the repository, check out the **Actions** tab in the repository.

@@ -122,3 +122,5 @@ This GitHub workflow file contains the instructions that the workflow will execu
 
 ## Step 8: Push the Docker image to AWS ECR
 Make a commit to the GitHub repository. Once the changes are pushed to the repository, check out the **Actions** tab in the repository.
+
+![image](https://github.com/liaucg/module_3.11_assignment/assets/22501900/e6be94fd-b270-413b-b6f5-d124a8866aa9)

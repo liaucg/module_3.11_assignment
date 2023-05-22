@@ -66,6 +66,52 @@ In order to access AWS ECR registry the AWS access key ID and AWS secret access 
 ![image](https://github.com/liaucg/module_3.11_assignment/assets/22501900/94969256-0d18-4573-b55d-23dd8277c32c)
 
 ## Step 7: Create a GitHub Actions workflow file
+[aws-ecs-ecr.yml](.github/workflows/aws-ecs-ecr.yml)
+```yml
+name: Deploy to Amazon ECS
+
+on:
+  push:
+    branches: [ "main" ]
+
+env:            
+  AWS_REGION: ap-southeast-1     
+  ECR_REPOSITORY: liau_module_3.11
+
+# permissions:
+#   contents: read
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    environment: dev
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: ${{ env.AWS_REGION }}
+
+    - name: Login to Amazon ECR
+      id: login-ecr
+      uses: aws-actions/amazon-ecr-login@v1
+
+    - name: Build, tag, and push image to Amazon ECR
+      id: build-image
+      env:
+        ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+        IMAGE_TAG: ${{ github.sha }}
+      run: |
+        docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
+        docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+        echo "image=$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG" >> $GITHUB_OUTPUT
+```
 This GitHub workflow file contains the instructions that the workflow will execute. There are 4 steps to be executed:
 
 1. Create a Ubuntu remote *environment/Runner* where the workflow can run and build the image.

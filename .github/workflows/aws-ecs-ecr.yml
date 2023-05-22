@@ -31,12 +31,8 @@ on:
     branches: [ "main" ]
 
 env:            
-  AWS_REGION: us-east-1           
-  ECR_REPOSITORY: liau-node-app
-  ECS_SERVICE: ecs-td-liau          
-  ECS_CLUSTER: ecs-tf-liau                     
-  CONTAINER_NAME: ecs-sample         
-                                               
+  AWS_REGION: a-southeast-1           
+  ECR_REPOSITORY: liau_module_3.11                                               
 
 # permissions:
 #   contents: read

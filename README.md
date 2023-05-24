@@ -126,13 +126,12 @@ Make a commit to the GitHub repository. Once the changes are pushed to the repos
 ![image](https://github.com/liaucg/module_3.11_assignment/assets/22501900/e6be94fd-b270-413b-b6f5-d124a8866aa9)
 ![image](https://github.com/liaucg/module_3.11_assignment/assets/22501900/0937c6eb-e95b-4a2d-9cd4-54696a7fb481)
 
-Checkout AWS ECR repository for the pushed Docker image.
+Verify that the Docker image is pushed to AWS ECR repository.
 ![image](https://github.com/liaucg/module_3.11_assignment/assets/22501900/99672a7d-388e-49ab-aaa7-074cf0082105)
 
-## Step 9: Create a AWS ECS Cluster
-![image](https://github.com/liaucg/module_3.11_assignment/assets/22501900/1e380c59-81d1-4eae-ac24-434ba9ebf61e)
-
-## Step 10: Set up a task definition and service in AWS ECS to deploy the containerized application
+*Note*
+*Deploying the containerized application to ECS ended up with the following error thus this step is omitted from this document.*
+![image](https://github.com/liaucg/module_3.11_assignment/assets/22501900/0125e754-26f0-41ed-aae6-2228e8470ac8)
 
 
 
